@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mac Admin Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <div class="brand-block">
+        <p class="brand">Mac Admin Analytics</p>
+        <h1 id="hostname">Scanning…</h1>
+        <p class="sub" id="host-meta"></p>
+      </div>
+      <div class="top-actions">
+        <span class="stamp" id="collected-at">—</span>
+        <button type="button" id="refresh-btn" class="btn">Refresh</button>
+      </div>
+    </header>
+
+    <section class="metrics" id="metrics" aria-label="System metrics"></section>
+
+    <nav class="tabs" role="tablist">
+      <button type="button" class="tab active" data-tab="cloud">Cloud move</button>
+      <button type="button" class="tab" data-tab="network">Network &amp; browser</button>
+      <button type="button" class="tab" data-tab="ports">Ports</button>
+      <button type="button" class="tab" data-tab="docker">Docker</button>
+      <button type="button" class="tab" data-tab="processes">Processes</button>
+      <button type="button" class="tab" data-tab="deps">Dependencies</button>
+      <button type="button" class="tab" data-tab="apps">Apps</button>
+    </nav>
+
+    <main>
+      <section class="panel active" id="panel-cloud"></section>
+      <section class="panel" id="panel-network"></section>
+      <section class="panel" id="panel-ports"></section>
+      <section class="panel" id="panel-docker"></section>
+      <section class="panel" id="panel-processes"></section>
+      <section class="panel" id="panel-deps"></section>
+      <section class="panel" id="panel-apps"></section>
+    </main>
+
+    <footer class="foot">
+      Dashboard on 127.0.0.1 · public IP/geo lookup uses outbound HTTPS · auto-refresh every 30s
+    </footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
