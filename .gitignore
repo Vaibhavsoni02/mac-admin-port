@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+*.log
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+.streamlit/secrets.toml
